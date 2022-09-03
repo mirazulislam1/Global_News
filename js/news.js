@@ -30,16 +30,19 @@ const displayCategorys = categorys =>{
         console.log(value);
         const div = document.createElement('div')
         div.innerHTML= `
-        <div class="card mb-3 p-4 m-4" >
+        <div class="card mb-3 p-4 " >
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="${value.thumbnail_url}" class="img-fluid rounded-start" alt="...">
+            <img src="${value.thumbnail_url}" class="img-fluid rounded-start " alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">${value.title}</h5>
-              <p class="card-text">${value.details.slice(0, 400) +' ...'}</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <h5 class="card-title fs-2">${value.title}</h5>
+              <p class="card-text fs-5">${value.details.slice(0, 400) +' ...'}</p>
+              <div>
+              <img src="${value.author.img}" class="rounded-circle author" alt="...">
+              <a>${value.author.name}</a>
+              </div>
             </div>
           </div>
         </div>
